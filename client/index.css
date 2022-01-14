@@ -1,0 +1,28 @@
+body {
+  background-color: lightgrey;
+}
+
+.info-here,
+.fortune-scale {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid black;
+  margin-top: 20px;
+  padding: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 11px;
+}
+
+/* <div class="fortune-scale">
+<button class="minus">-</button>
+<button class="plus">+</button>
+</div> */
+
+.fortune-scale {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+}
