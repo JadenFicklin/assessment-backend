@@ -23,7 +23,6 @@ const updateFortune = (id, type) =>
     .then(displayAmount)
     .catch(errCallback);
 
-//added
 const updateFortuneAdd = (id, type) =>
   axios
     .put("http://localhost:4001/api/add", { type })
@@ -38,7 +37,6 @@ const displayAmount = (amount) => {
   getAmount.appendChild(t);
 };
 
-//added
 const displayAmountTwo = (amount) => {
   const addAmount = amount.data[0].fortune;
   let t = document.createTextNode(addAmount);
@@ -48,7 +46,36 @@ const displayAmountTwo = (amount) => {
 document.querySelector(".minus").onclick = function () {
   updateFortune(1, "minus");
 };
-//added
+
 document.querySelector(".plus").onclick = function () {
   updateFortuneAdd(1, "plus");
+};
+
+//axios delete
+
+let grabPTag = document.querySelector(".fortune-amount");
+
+document.querySelector(".delete-button").onclick = function () {
+  axios
+    .delete("http://localhost:4001/api/delete")
+    .then(function (res) {
+      grabPTag = res;
+    })
+    .catch(errCallback);
+};
+
+//post the goal
+
+let textBox = document.querySelector(".goal");
+let paragraphGoal = document.querySelector(".paragraph-goal");
+
+function displayGoal(goal) {
+  let t = document.createTextNode(goal);
+  paragraphGoal.appendChild(t);
+}
+
+document.querySelector(".send-goal").onclick = function () {
+  axios.post("http://localhost: 4001/api/goal/").then(function (res) {
+    displayGoal(textBox.value);
+  });
 };

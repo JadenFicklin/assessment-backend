@@ -2,10 +2,9 @@ body {
   background-color: lightgrey;
 }
 
-.info-here,
-.fortune-scale {
+.info-here {
   width: 200px;
-  height: 50px;
+  height: 100px;
   background-color: white;
   border: 1px solid black;
   margin-top: 20px;
@@ -22,7 +21,32 @@ body {
 
 .fortune-scale {
   display: flex;
-
+  width: 200px;
   justify-content: space-around;
   align-items: center;
+  width: 400px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  margin-top: 20px;
+  padding: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 11px;
+}
+
+.create-goal-div {
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  margin-top: 20px;
+  padding: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 11px;
+}
+
+.send-goal {
+  margin-top: 10px;
 }

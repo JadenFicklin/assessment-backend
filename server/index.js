@@ -52,4 +52,15 @@ app.put("/api/add", (req, res) => {
   }
 });
 
+//delete fortune
+
+app.delete("/api/delete", (req, res) => {
+  fortunes[0].fortune = 0;
+  res.status(200).send("whatever");
+});
 app.listen(4001, () => console.log("Server running on 4001"));
+
+//post goal
+app.post("/api/goal", (req, res) => {
+  console.log(req.params);
+});

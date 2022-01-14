@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body class="container">
-    <button id="fortuneButton">Get your fortune!</button>
     <div class="info-here">
+      <button id="fortuneButton">Get your fortune!</button>
       <p class="fortune">fortune:</p>
     </div>
     <div class="fortune-scale">
@@ -14,6 +14,12 @@
       <button class="minus">-</button>
       <p class="fortune-amount"></p>
       <button class="plus">+</button>
+      <button class="delete-button">Reset fortune</button>
+    </div>
+    <div class="create-goal-div">
+      <input type="text" class="goal" placeholder="Enter your goal here" />
+      <button class="send-goal">post your goal</button>
+      <p class="paragraph-goal"></p>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
