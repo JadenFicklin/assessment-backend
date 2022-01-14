@@ -62,7 +62,7 @@ app.listen(4001, () => console.log("Server running on 4001"));
 
 //post goal
 app.post("/api/goal", (req, res) => {
-  const { goal } = req.data;
+  const { goal } = req.body;
   let returnGoal = {
     goal,
   };

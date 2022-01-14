@@ -75,7 +75,9 @@ function displayGoal(goal) {
 }
 
 document.querySelector(".send-goal").onclick = function () {
-  axios.post("http://localhost: 4001/api/goal/").then(function (res) {
-    displayGoal(textBox.value);
-  });
+  axios
+    .post("http://localhost:4001/api/goal", { goal: textBox.value })
+    .then(function (res) {
+      displayGoal(res.data.goal);
+    });
 };

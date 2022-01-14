@@ -50,3 +50,8 @@ body {
 .send-goal {
   margin-top: 10px;
 }
+
+.goal {
+  font-size: 10px;
+  width: 190px;
+}
